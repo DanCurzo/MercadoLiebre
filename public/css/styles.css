@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto,wght@1,100&display=swap');
+
+/*
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+.body {
+    background-color: #ebebeb;
+}
+
+header {
+    background-color: #EAC926;
+}
+
+.banner-img {
+    width: 20%;
+}
+
+.buscador {
+    margin: 10px;
+}
+
+.titulares {
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #666;
+}
+
+.precios {
+    font-size: 18px;
+}
+
+.descuentos {
+    color: #39b54a;
+}
+
+.descuentos,
+.descripciones {
+    font-size: 16px;
+}
+
+.icon {
+    padding: 2px;
+}
+
+.buscador,
+.banner-promocion,
+.menu {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu {
+    margin: 10px;
+}
+
+.menu-desktop a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+.main-section {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    text-align: center;
+    background-color: #ebebeb;
+}
+
+.main-product {
+    margin-bottom: 10px;
+}
+
+.product-details {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    text-align: left;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+.icon-truck {
+    color: #39b54a;
+}
+
+.footer {
+    text-align: center;
+    margin: 5px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.footer-section {
+    margin-bottom: 50px;
+}
+
+.icon-footer {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+@media (max-width:361px) {
+    .descripciones {
+        display: none;
+    }
+}
+
+@media (min-width:361px) {
+    .main-product {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (max-width:769px) {
+    .banner-principal {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .banner-img {
+        width: 40%;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-hamburguesa {
+        background-color: #1259c3;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+        padding: 2px;
+        width: fit-content;
+    }
+
+    .main-section {
+        width: 90%;
+    }
+}
+
+@media (min-width:769px) {
+    .menu-hamburguesa {
+        display: none;
+    }
+}

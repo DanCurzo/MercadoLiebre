@@ -1,0 +1,82 @@
+.prices {
+    font-size: 18px;
+}
+
+.discounts {
+    color: #39b54a;
+}
+
+.discounts,
+.descriptions {
+    font-size: 16px;
+}
+
+.main-section {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    text-align: center;
+    background-color: #ebebeb;
+}
+
+.main-product {
+    margin-bottom: 10px;
+}
+
+.product-details {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    text-align: left;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+.fa-truck {
+    color: #39b54a;
+    border: #39b54a 1px solid;
+    padding-right: 4px;
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 50px;
+    font-size: 15px;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 46%;
+    background-color: #fff;
+    transition-duration: 1s;
+}
+
+.fa-truck:hover {
+    transform: rotateZ(-90deg);
+    transition-duration: 1s;
+}
+
+@media (max-width:361px) {
+    .descriptions {
+        display: none;
+    }
+}
+
+@media (min-width:361px) {
+    .main-product:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (max-width:769px) {
+    .main-section {
+        width: 90%;
+    }
+
+    .fa-truck {
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 75%;
+        background-color: #fff;
+        transition-duration: 1s;
+    }
+}

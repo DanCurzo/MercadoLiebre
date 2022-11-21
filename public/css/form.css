@@ -1,0 +1,90 @@
+/*  COMMON */
+.register-body,
+.login-body {
+    background-color: #ebebeb;
+}
+
+.form-register,
+.form-login {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 10px;
+    text-align: left;
+}
+
+.form-input {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input {
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+.form-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.action-btn {
+    background-color: #1259c3;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100px;
+}
+
+.action-btn:hover {
+    background-color: #0022AA;
+}
+
+.delete-btn {
+    background-color: #03264C;
+}
+
+.errors {
+    text-align: center;
+    color: #721c24;
+}
+
+/* REGISTER */
+.form-title-register {
+    margin-right: 20px;
+}
+
+.form-section {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-section label {
+    font-size: 16px;
+}
+
+.form-li {
+    margin: 5px;
+}
+
+.form-li input {
+    margin-right: 5px;
+}
+
+/* LOGIN */
+.form-login {
+    height: 60vh;
+}
+
+.btn-login {
+    width: 100%;
+}

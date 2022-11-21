@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./partials/head.ejs') %>
+        <link href="css/form.css" rel="stylesheet">
+        <title>Login</title>
+</head>
+
+<body class="login-body">
+    <%- include ('./partials/header.ejs') %>
+        <h1 class="headlines form-title">
+            Ingresá
+        </h1>
+        <div class="form-login">
+            <form action="/" method="GET" class="login-form">
+                <!-- USERNAME -->
+                <div class="form-input">
+                    <input type="text" name="username" class="input inputUsername" placeholder="Nombre de usuario" required>
+                </div>
+
+                <div class="errors errorUsername">
+                    <% if (locals.errors && locals.errors.username) { %>
+                        <p class="error">
+                            <%= locals.errors.username.msg %>
+                        </p>
+                    <% } %>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-input">
+                    <input type="password" name="password" class="input inputPassword" placeholder="Contraseña" required>
+                </div>
+
+                <div class="errors errorPassword">
+                    <% if (locals.errors && locals.errors.password) { %>
+                        <p class="error">
+                            <%= locals.errors.password.msg %>
+                        </p>
+                    <% } %>
+                </div>
+
+                <!-- BUTTON -->
+                <div>
+                    <input type="submit" name="button" class="action-btn btn-login" value="Enviar" required>
+                </div>
+            </form>
+        </div>
+        <script src="/loginValidations.js"></script>
+</body>
+
+<%- include ('./partials/footer.ejs') %>
+
+</html>

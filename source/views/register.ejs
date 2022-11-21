@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./partials/head.ejs') %>
+        <link href="css/form.css" rel="stylesheet">
+        <title>Registro</title>
+</head>
+
+<body class="register-body">
+    <%- include ('./partials/header.ejs') %>
+        <h1 class="headlines form-title form-title-register">
+            Crea tu cuenta
+        </h1>
+        <div class="form-register form-title-register">
+            <form action="/" method="GET">
+                <!-- NAME -->
+                <div class="form-input">
+                    <input type="text" name="name" class="input inputName" placeholder="Nombre y apellido" required>
+                </div>
+
+                <div class="errors errorName">
+                    <% if (locals.errors && locals.errors.name) { %>
+                        <p class="error">
+                            <%= locals.errors.name.msg %>
+                        </p>
+                    <% } %>
+                </div>
+
+                <!-- DATE -->
+                <div class="form-input">
+                    <p class="form-section">
+                        <label for="date">Fecha de nacimiento</label>
+                    </p>
+                    <input type="date" name="date" class="input inputDate" placeholder="Fecha de nacimiento" required>
+                </div>
+
+                <div class="errors errorDate">
+                    <% if (locals.errors && locals.errors.date) { %>
+                        <p class="error">
+                            <%= locals.errors.date.msg %>
+                        </p>
+                    <% } %>
+                </div>
+
+                <!-- ADDRESS -->
+                <div class="form-input">
+                    <input type="text" name="address" class="input inputAddress" placeholder="Domicilio" required>
+                </div>
+
+                <div class="errors errorAddress">
+                    <% if (locals.errors && locals.errors.address) { %>
+                        <p class="error">
+                            <%= locals.errors.address.msg %>
+                        </p>
+                    <% } %>
+                </div>
+
+                <!-- PROFILE -->
+                <div class="form-input">
+                    <p class="form-section">
+                        Perfil del usuario
+                    </p>
+                    <input type="radio" name="profile" value="Comprar"> Comprar
+                    <input type="radio" name="profile" value="Vender"> Vender
+                </div>
+
+                <!-- INTERESTS -->
+                <div class="form-input">
+                    <p class="form-section">
+                        Intereses
+                    </p>
+                    <ul>
+                        <li class="form-li">
+                            <input type="checkbox" name="interests" value="Electro">Electro
+                        </li>
+                        <li class="form-li">
+                            <input type="checkbox" name="interests" value="Correr">Moda
+                        </li>
+                        <li class="form-li">
+                            <input type="checkbox" name="interests" value="Hogar">Hogar
+                        </li>
+                        <li class="form-li">
+                            <input type="checkbox" name="interests" value="Jugueteria">Jugueteria
+                        </li>
+                        <li class="form-li">
+                            <input type="checkbox" name="interests" value="Vida sana">Vida sana
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- IMG -->
+                <div class="form-input">
+                    <p class="form-section">
+                        <label for="img">Foto de perfil</label>
+                    </p>
+                    <input type="file" name="img" id="img" class="login campoFile">
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-input">
+                    <input type="password" name="password" class="input inputPassword" placeholder="Contraseña" required>
+                </div>
+
+                <div class="errors errorPassword">
+                    <% if (locals.errors && locals.errors.password) { %>
+                        <p class="error">
+                            <%= locals.errors.password.msg %>
+                        </p>
+                    <% } %>
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-input">
+                    <input type="password" name="confirmPassword" class="input inputConfirmPassword" placeholder="Confirmar contraseña" required>
+                </div>
+
+                <div class="errors errorConfirmPassword">
+                    <% if (locals.errors && locals.errors.confirmPassword) { %>
+                        <p class="error">
+                            <%= locals.errors.confirmPassword.msg %>
+                        </p>
+                    <% } %>
+                </div>
+
+                <!-- BUTTON -->
+                <div class="form-input">
+                    <input type="submit" name="button" value="Enviar" class="action-btn">
+                    <button type="reset" class="action-btn delete-btn">Borrar</button>
+                </div>
+            </form>
+        </div>
+        <script src="/registerValidations.js"></script>
+</body>
+
+<%- include ('./partials/footer.ejs') %>
+
+</html>

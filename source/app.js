@@ -1,10 +1,11 @@
 const express = require('express');
+require('dotenv').config();
 
 // Server
 const app = express();
 
-app.listen(5050, () => {
-    console.log('Running on port 5050');
+app.listen(process.env.PORT, () => {
+    console.log(`Running on port ${process.env.PORT}`);
 });
 
 const {join} = require('path');
